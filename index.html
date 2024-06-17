@@ -1,9 +1,92 @@
+<!DOCTYPE html>
 <html>
     <head>
-       <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-	<script src="index.js"></script>
+        <header>
+            <div class="header-texts">
+                <h1> Jimmy's Diner </h1>
+                <h2> The best burgers and pizzas in Town. </h2>
+            </div>
+        </header>
+        <main>
+            <section class="menu" id="memu-cont">
+                <div class="item-cont">
+                    <div class="Item-detail">
+                        <div class="item-thumb" id="item-thumb" role="img" aria-label="">🍕</div>
+                        <div class="text-description">
+                            <h1 id="item-name" >Pizza</h1>
+                            <p id="description">
+                                pepperoni, 
+                                mushrom, 
+                                mozarella
+                            </p>
+                            <h2 id="price-tag">$14</h2>
+                        </div>
+                    </div>
+                    <button id="add-item-btn"> + </button>
+                </div>
+            </section>
+
+            <section class="count" id="count-cont">
+                <p>Your order</p>
+                <div class="oreder-overview">
+                    <p class="selected-item" id="selected-item"> 
+                        Pizza 
+                        <span> 
+                            <button id="remove-btns">
+                                Remove
+                            </button>
+                        </span>
+                    </p>
+                    <p class="ordered-price" 
+                    id="ordered-price">
+                        $14
+                    </p>
+                </div>
+                <hr>
+                <div class="total-bar">
+                    <p >Total price:</p>
+                    <p class="total-price" id="total-price">$14</p>
+                </div>  
+              <button id="complete-order-btn">
+                Complete order
+              </button>
+            </section>
+
+            <section class="payment" id="pay-cont">
+                <h1>Enter card details</h1>
+                <form type="submit">
+                    <input type="text" 
+                            placeholder="Enter your name" 
+                            name="name-Input" 
+                            required>
+                    <input type="text" 
+                            placeholder="105 011 018 259" 
+                            name="card-number" 
+                            minlength="13"
+                            maxlength="13"
+                            pattern="[0-9]+"
+                            required>
+                    <input type="text" 
+                            placeholder="1234" 
+                            name="Enter-CVV" 
+                            minlength="4"
+                            maxlength="4"
+                            pattern="[0-9]+"
+                            required>
+                    <button id="pay-btn"> Pay 🥹 </button>
+                </form> 
+            </section>
+            <div class="thanks" id="thanks">
+                <h2 id="Thank-you-message">
+                    Thank you, Nola! Your Order is on its Way!
+                </h2>
+            </div>
+        </main>
+	<script src="index.js" type="module"></script>
     </body>
 </html>
 
