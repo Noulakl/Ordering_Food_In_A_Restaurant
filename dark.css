@@ -97,9 +97,10 @@ height: fit-content
     padding: 20px;
     margin-top: 50px;
     text-align: center;
-    color: #065F46;
 }
-
+#Thank-you-message{
+    color: #089767;
+}
 .prices-count{
     display: flex;
     align-items: center;
